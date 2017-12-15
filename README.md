@@ -15,10 +15,9 @@ I obtained the data by combining multiple files that I gathered through Genomic 
 
 For feature selection I divided patients into two groups along a cut-off value that maximizes the log-rank statistic. Then, I ranked p-values and corrected for multiple hypothesis testing. What I am doing essentially is trying to find genes that have the maximum survival difference between high and low groups. This procedure identified prognostic genes and reduced the number of features to about 3000.
 
-Next to build my model, I used COX proportional hazards regression. This technique is used in clinical research to relate risk factors or exposures to survival time. After checking the model assumptions, a stepwise procedure is used for further feature selection. Even though, I had 3000 genes, my model didn’t significantly change after taking into account top 50 genes, so I didn’t consider the rest.
+Next to build my model, I used COX proportional hazards regression. This technique is used in clinical research to relate risk factors or exposures to survival time. After checking the model assumptions, a stepwise procedure is used for further feature selection. 
 
-And to validate my model I used concordance index (c-index) which is the fraction of pairs where the observation with the higher survival time have the higher probability of survival predicted by your model. 
-So the model only using clinical information or genes had an accuracy of 0.70, but combining both genes and clinical features in my model I was able to get c-index of 0.78 (in the validation data). Therefore by using information from patient’s gene expression profile I was able to increase the accuracy of my survival predictions. 
+And to validate my model I used concordance index (c-index) which is the fraction of pairs where the observation with the higher survival time have the higher probability of survival predicted by your model. So the model only using clinical information or genes had an accuracy of 0.60, but combining both genes and clinical features in my model I was able to get c-index of 0.65 (in the validation data). Therefore by using information from patient’s gene expression profile I was able to increase the accuracy of my survival predictions. 
 
 References:
 
