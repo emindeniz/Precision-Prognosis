@@ -33,6 +33,7 @@ https://drive.google.com/open?id=1RauiKda6SnJKFRqhed-cB2z7Av3Z0--w
 
 #### Requirements:
 - Python=3.5
+- Cox-nnet
 - Numpy
 - Pandas
 - Bokeh
